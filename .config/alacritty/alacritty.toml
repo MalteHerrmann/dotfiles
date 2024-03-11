@@ -1,0 +1,10 @@
+[window]
+decorations = "Buttonless"
+padding = { x=10, y=10 }
+dynamic_padding = true
+opacity = 0.9
+
+[font]
+normal = { family = "BitstromWera Nerd Font", style = "Regular" }
+size = 13.0
+

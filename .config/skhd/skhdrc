@@ -1,0 +1,44 @@
+# prevent skhd from monitoring events for specific applications.
+.blacklist [
+   "1Password"
+]
+
+# open Alacritty with cmd + shift - return
+cmd + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# ------------------------------
+# Yabai
+
+# Move window
+alt + ctrl + shift - h : yabai -m window --swap west
+alt + ctrl + shift - j : yabai -m window --swap south
+alt + ctrl + shift - k : yabai -m window --swap north
+alt + ctrl + shift - l : yabai -m window --swap east
+
+# Move focus
+alt + shift - h : yabai -m window --focus west
+alt + shift - j : yabai -m window --focus south
+alt + shift - k : yabai -m window --focus north
+alt + shift - l : yabai -m window --focus east
+
+# Flip spaces
+alt + shift - x : yabai -m space --mirror x-axis
+alt + shift - y : yabai -m space --mirror y-axis
+
+# Zoom to window size
+alt + shift - z : yabai -m window --toggle zoom-fullscreen
+
+# Rotate space
+alt + shift - r : yabai -m space --rotate 90
+
+# Balance space
+alt + shift - b : yabai -m space --balance
+
+# Move spaces
+alt + shift - 1 : yabai -m window --space 1 --focus
+alt + shift - 2 : yabai -m window --space 2 --focus
+alt + shift - 3 : yabai -m window --space 3 --focus
+
+# Toggle float
+alt + shift - t : yabai -m window --toggle float
+
