@@ -1,0 +1,11 @@
+[window]
+decorations = "Buttonless"
+padding = { x=10, y=10 }
+dynamic_padding = true
+opacity = 0.7
+
+[font]
+# normal = { family = "MesloLGL Nerd Font", style = "Regular" }
+normal = { family = "InconsolataGo Nerd Font", style = "Regular" }
+size = 13.0
+
