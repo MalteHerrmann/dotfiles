@@ -36,6 +36,7 @@ ctrl + shift - 1 : yabai -m window --space 1 --focus
 ctrl + shift - 2 : yabai -m window --space 2 --focus
 ctrl + shift - 3 : yabai -m window --space 3 --focus
 ctrl + shift - 4 : yabai -m window --space 4 --focus
+ctrl + shift - 5 : yabai -m window --space 5 --focus
 
 # Toggle float
 ctrl + shift - t : yabai -m window --toggle float
