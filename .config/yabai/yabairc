@@ -5,12 +5,6 @@ yabai -m config layout bsp
 # or bottom if horizontal split
 yabai -m config window_placement second_child
 
-# Per default add 10 px padding to the windows
-yabai -m space --padding abs:10:10:10:10
-
-# Add 10px gap between windows
-yabai -m space --gap abs:10
-
 # ------------------------------
 # Float
 yabai -m rule --add app="^Notion Calendar$" manage=off
