@@ -63,5 +63,10 @@ eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
+# Fix Nix installation after system upgrades
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
