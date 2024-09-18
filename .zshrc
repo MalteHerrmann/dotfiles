@@ -49,6 +49,10 @@ alias vim='nvim'
 autoload -U compinit
 compinit -i
 
+# --------------------
+# CLI tools
+#
+
 # Set up oh-my-posh
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     # eval "$(oh-my-posh init zsh)"
@@ -63,10 +67,18 @@ eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-# Fix Nix installation after system upgrades
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
+# --------------------
+# Nix
+#
 
+# # Fix Nix installation after system upgrades
+# TODO: we'll have to see if this is required after installing Nix with Determinate Systems installer (https://github.com/DeterminateSystems/nix-installer)
+# if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+#   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+# fi
+
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+
+# -------------------
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
