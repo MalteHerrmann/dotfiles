@@ -21,9 +21,11 @@
     helix
 
     # other dev tools
+    bat
     du-dust
     eza
     fzf
+    gh
     jq
     stow
     tmux
