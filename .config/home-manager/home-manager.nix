@@ -15,6 +15,7 @@
 
     # programming languages
     go
+    python3
 
     # editors
     helix

@@ -36,6 +36,7 @@ alias mtc='make test-cover'
 alias pip='pip3'
 alias py='python3'
 alias python='python3'
+alias python3="$HOME/.nix-profile/bin/python3"
 alias t='tmux'
 alias ta='tmux attach'
 alias v='nvim'
