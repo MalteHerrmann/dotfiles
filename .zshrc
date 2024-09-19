@@ -1,6 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # Paths
 export PATH=$PATH:$(go env GOPATH)/bin
 export VENV_DIR=$HOME/python/envs
@@ -55,10 +52,14 @@ compinit -i
 
 # Set up oh-my-posh
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    # eval "$(oh-my-posh init zsh)"
-    # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
-    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
-    # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/bubblesextra.omp.json)"
+    if command -v oh-my-posh >/dev/null 2>&1; then
+        # eval "$(oh-my-posh init zsh)"
+        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
+        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
+        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/bubblesextra.omp.json)"
+    else
+        echo "oh-my-posh not found, skipping theme initialization."
+    fi
 fi
 
 # Set up zoxide
@@ -78,7 +79,3 @@ eval "$(fzf --zsh)"
 # fi
 
 source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
-
-# -------------------
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
