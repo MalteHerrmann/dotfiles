@@ -1,0 +1,130 @@
+start-at-login = true
+
+after-startup-command = [
+    'exec-and-forget borders active_color=0xff1A91E5 inactive_color=0xff494d64 width=7.0',
+]
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+key-mapping.preset = 'qwerty'
+
+# Mouse follows focus when focused monitor changes
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
+
+# Automatic app placing
+[[on-window-detected]]
+if.app-name-regex-substring = 'arc'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'brave'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'calendar'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'zed'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'docker'
+run = ['move-node-to-workspace D']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'slack'
+run = ['move-node-to-workspace S']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'telegram'
+run = ['move-node-to-workspace S']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'notion'
+run = ['move-node-to-workspace N']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'obsidian'
+run = ['move-node-to-workspace N']
+
+# MAIN bindings
+[mode.main.binding]
+
+# Change container layout AND direction.
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+
+# Move between apps in the same workspace.
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Move apps in the container AND change direction.
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Resizing.
+alt-f = 'fullscreen'
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
+
+# Movements between workspaces.
+alt-1 = 'workspace 1' # Browser
+alt-2 = 'workspace 2' # Calendar
+alt-3 = 'workspace 3' # Editors
+alt-4 = 'workspace 4' # Terminal
+alt-5 = 'workspace 5'
+alt-d = 'workspace D' # Docker
+alt-m = 'workspace M' # Music
+alt-n = 'workspace N' # Notes
+alt-s = 'workspace S' # Social
+
+# Move app to workspace.
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-d = 'move-node-to-workspace D'
+alt-shift-m = 'move-node-to-workspace M'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-s = 'move-node-to-workspace S'
+
+alt-tab = 'workspace-back-and-forth'
+
+alt-shift-tab = 'move-node-to-monitor --wrap-around next'
+
+# SERVICE bindings.
+alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main'] # Reset layout
+f = [
+    'layout floating tiling',
+    'mode main',
+] # Toggle between floating and tiling layout
+backspace = ['close-all-windows-but-current', 'mode main']
+
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
