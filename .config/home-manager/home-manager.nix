@@ -4,16 +4,16 @@
   nixpkgs.config.allowUnfreePredicate = (_: true);
 
   home.packages = with pkgs; [
-    # # terminal stuff
-    #
+    # terminal stuff
+    oh-my-posh
+
     # TODO: currently terminals and other GUI apps are installed with brew,
     # because they would not be picked up by Spotlight and fail to correctly
     # load their configs.
 
     # productivity
+    obsidian
     raycast
-    yabai
-    skhd
 
     # programming languages
     go
