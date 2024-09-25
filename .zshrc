@@ -57,7 +57,8 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if command -v oh-my-posh >/dev/null 2>&1; then
         # eval "$(oh-my-posh init zsh)"
         # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
-        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
+        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
+        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/avit.omp.json)"
         # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/bubblesextra.omp.json)"
     else
         echo "oh-my-posh not found, skipping theme initialization."
