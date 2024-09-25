@@ -11,9 +11,14 @@
     # because they would not be picked up by Spotlight and fail to correctly
     # load their configs.
 
+    # terminals
+    kitty
+    warp-terminal
+
     # productivity
     obsidian
     raycast
+    bartender
 
     # programming languages
     go
