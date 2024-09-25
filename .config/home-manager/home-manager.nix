@@ -25,10 +25,13 @@
     rustc
     python3
     nodejs
-
+  
     # build tools
     cargo
     yarn
+
+    # LSPs
+    rust-analyzer
 
     # editors
     helix
