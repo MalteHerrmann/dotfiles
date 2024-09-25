@@ -17,7 +17,13 @@
 
     # programming languages
     go
+    rustc
     python3
+    nodejs
+
+    # build tools
+    cargo
+    yarn
 
     # editors
     helix
