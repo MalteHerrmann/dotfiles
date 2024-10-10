@@ -35,6 +35,7 @@
 
     # editors
     helix
+    glow  # markdown reader
 
     # other dev tools
     bat
