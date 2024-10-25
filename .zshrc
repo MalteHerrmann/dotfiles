@@ -38,11 +38,15 @@ alias mtc='make test-cover'
 alias pip='pip3'
 alias py='python3'
 alias python='python3'
-alias python3="$HOME/.nix-profile/bin/python3"
 alias t='tmux'
 alias ta='tmux attach'
 alias v='nvim'
 alias vim='nvim'
+
+# if nix is used, then hardcode python3 to use the nix version
+if [ -f "$HOME/.nix-profile/bin/python3" ]; then
+    alias python3="$HOME/.nix-profile/bin/python3"
+fi
 
 # Enable GitHub CLI autocompletion as described in 
 # https://cli.github.com/manual/gh_completion
