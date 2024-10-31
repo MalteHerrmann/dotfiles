@@ -20,6 +20,9 @@
     raycast
     bartender
 
+    # image editing
+    gimp
+
     # programming languages
     go
     rustc
