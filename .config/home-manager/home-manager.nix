@@ -38,6 +38,7 @@
 
     # editors
     helix
+    neovim
     glow  # markdown reader
 
     # other dev tools
