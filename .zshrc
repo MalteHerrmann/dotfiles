@@ -40,6 +40,7 @@ alias py='python3'
 alias python='python3'
 alias t='tmux'
 alias ta='tmux attach'
+alias td='tmux detach'
 alias v='nvim'
 alias vim='nvim'
 
@@ -81,9 +82,13 @@ eval "$(fzf --zsh)"
 #
 
 # # Fix Nix installation after system upgrades
-# TODO: we'll have to see if this is required after installing Nix with Determinate Systems installer (https://github.com/DeterminateSystems/nix-installer)
+# # TODO: we'll have to see if this is required after installing Nix with Determinate Systems installer (https://github.com/DeterminateSystems/nix-installer)
 # if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 #   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 # fi
 
-source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+# Load nix session vars if it exists
+if [ -f '$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh' ]; then
+  source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+fi
+
