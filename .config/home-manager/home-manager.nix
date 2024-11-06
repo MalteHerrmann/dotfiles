@@ -48,6 +48,7 @@
     fzf
     gh
     jq
+    ripgrep
     stow
     tmux
     tree
