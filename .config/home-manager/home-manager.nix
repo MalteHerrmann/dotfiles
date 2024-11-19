@@ -1,4 +1,4 @@
-{ config, pkgs, libs, ... }:
+{ config, pkgs, devenv, ... }:
 {
   # allow proprietary software to be built for individual cases
   nixpkgs.config.allowUnfreePredicate = (_: true);
@@ -53,6 +53,10 @@
     tmux
     tree
     zoxide
+
+    # set up devenv
+    # TODO: this is building fine but devenv is not working
+    devenv
   ];
 
   # Let Home Manager install and manage itself.
