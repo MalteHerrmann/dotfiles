@@ -7,12 +7,7 @@
     # terminal stuff
     oh-my-posh
 
-    # TODO: currently terminals and other GUI apps are installed with brew,
-    # because they would not be picked up by Spotlight and fail to correctly
-    # load their configs.
-
     # terminals
-    kitty
     warp-terminal
 
     # productivity
@@ -47,6 +42,7 @@
     eza
     fzf
     gh
+    gofumpt
     jq
     ripgrep
     stow
