@@ -19,7 +19,7 @@
       "show_inline_completions": false
     }
   },
-  "theme": "Rosé Pine Moon",
+  "theme": "Gruvbox Dark Hard",
   "vim_mode": true,
   "relative_line_numbers": true,
   "base_keymap": "VSCode",

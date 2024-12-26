@@ -3,7 +3,7 @@
   description = "Home Manager flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin"; # NOTE: we pin this version for 24.05
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin"; # NOTE: we pin this version for 24.11
     # nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable"; # NOTE: unstable releases
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

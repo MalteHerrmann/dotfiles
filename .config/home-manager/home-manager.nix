@@ -34,6 +34,7 @@
     # editors
     helix
     neovim
+    zed-editor
     glow  # markdown reader
 
     # other dev tools
