@@ -18,24 +18,25 @@
     # image editing
     gimp
 
-    # programming languages
+    # programming languages & related tools
     go
-    rustc
-    python3
-    nodejs
-  
-    # build tools
-    cargo
-    yarn
+    gofumpt
 
-    # LSPs
+    rustc
+    cargo
     rust-analyzer
+
+    python3
+    pylint
+    black
+
+    nodejs
+    yarn
 
     # editors
     helix
     neovim
     zed-editor
-    glow  # markdown reader
 
     # other dev tools
     bat
@@ -43,7 +44,6 @@
     eza
     fzf
     gh
-    gofumpt
     jq
     ripgrep
     stow

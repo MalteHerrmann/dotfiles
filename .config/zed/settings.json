@@ -19,7 +19,7 @@
       "show_inline_completions": false
     }
   },
-  "theme": "Gruvbox Dark Hard",
+  "theme": "Ayu Dark",
   "vim_mode": true,
   "relative_line_numbers": true,
   "base_keymap": "VSCode",
