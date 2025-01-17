@@ -25,6 +25,7 @@
     rustc
     cargo
     rust-analyzer
+    clippy
 
     python3
     pylint
