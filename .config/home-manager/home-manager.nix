@@ -7,12 +7,8 @@
     # terminal stuff
     oh-my-posh
 
-    # terminals
-    warp-terminal
-
     # productivity
     obsidian
-    raycast
     bartender
 
     # image editing
