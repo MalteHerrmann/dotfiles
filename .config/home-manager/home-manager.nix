@@ -18,10 +18,19 @@
     go
     gofumpt
 
-    rustc
-    cargo
-    rust-analyzer
-    clippy
+    # # TODO: Rust is not really working nicely with Nix out of the box,
+    # # people are building some overlays, etc. to get it to work
+    # # 
+    # # Some info can be found here:
+    # # https://stackoverflow.com/questions/40604084/cant-access-environment-variable-in-rust
+    # #
+    # # And some example of an Nix overlay for Rust:
+    # # https://github.com/oxalica/rust-overlay
+    #
+    # rustc
+    # cargo
+    # rust-analyzer
+    # clippy
 
     python3
     pylint
