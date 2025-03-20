@@ -31,7 +31,8 @@
       # copy some apps to /Applications
       for file in \
           "$HOME/Applications/Alacritty.app" \
-          "$HOME/Applications/Firefox Developer Edition.app" \
+          # TODO: remove Firefox stuff
+          # "$HOME/Applications/Firefox Developer Edition.app" \
         ; do
         existing="/Applications/$(basename "$file")"
         [[ -d "$existing" ]] && echo App already installed, refusing to copy it to /Applications: $existing && continue
