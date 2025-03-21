@@ -1,6 +1,8 @@
 ** NOTE: **
 
-This Nix-Darwin configuration was initially copied from https://github.com/torgeir/nix-darwin and then adjusted to fit my personal preferences.
+~~This Nix-Darwin configuration was initially copied from https://github.com/torgeir/nix-darwin and then adjusted to fit my personal preferences.~~
+After initial inspection the previously chosen setup was way too complex to start with `nix-darwin`.
+Instead, I will be using this template: https://github.com/ryan4yin/nix-darwin-kickstarter
 
 ----
 
