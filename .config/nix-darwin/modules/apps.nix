@@ -22,7 +22,7 @@
     # git
 
     # editors
-    nvim
+    neovim
 
     # image editing
     gimp

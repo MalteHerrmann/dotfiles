@@ -5,14 +5,10 @@ https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/minimal/flake.nix
 
 More information about the contents can be found in the corresponding README file on GitHub.
 
-## Build
+## Build & Deploy
 
-To build the configuration, run the following command:
+To build and deploy the configuration, run the following command:
 
 ```
-HOSTNAME="Maltes-MacBook-Pro.local"
-nix build .#darwinConfigurations.$HOSTNAME.system \
- 	--extra-experimental-features 'nix-command flakes'
-
-./result/sw/bin/darwin-rebuild switch --flake .#$HOSTNAME
+make deploy
 ```
