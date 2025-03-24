@@ -1,17 +1,9 @@
 { pkgs, ... }:
 {
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-
-    substituters = [
-      # "https://mirror.sjtu.edu.cn/nix-channels/store"
-      "https://nix-community.cachix.org"
-    ];
-    # TODO: check if this is required? What is it used for?
-    builders-use-substitutes = true;
-  };
-
-  # Auto-upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-  nix.package = pkgs.nix;
+  # I'm using the Determinate system's Nix installer.
+  # Determinate uses its own daemon to manage the Nix installation that
+  # conflicts with nix-darwin’s native Nix management.
+  #
+  # To turn off nix-darwin’s management of the Nix installation, set:
+  nix.enable = false;
 }

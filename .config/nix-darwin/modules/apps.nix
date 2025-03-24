@@ -18,18 +18,11 @@
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
-    # TODO: add git? Or not required since it's already preinstalled on Mac?
-    # git
-
     # editors
     neovim
 
     # image editing
     gimp
-
-    # productivity
-    obsidian
-    bartender
 
     # programming languages
     go
@@ -39,6 +32,9 @@
     python3
     uv
 
+    nodejs
+    yarn
+
     # dev tooling
     bat
     du-dust
@@ -46,6 +42,8 @@
     fzf
     gh
     jq
+    # TODO: add required fonts to nix-darwin configuration
+    oh-my-posh
     ripgrep
     stow
     tmux
@@ -69,8 +67,18 @@
 
     # Equivalent to `brew install --cask`
     casks = [
-      "raycast"
-      "zed"
+      "arc" # main browser
+      "bartender" # cleaner menu bar
+      "docker"
+      "goland" # go ide
+      "nikitabobko/tap/aerospace" # window manager
+      "notion" # work document system
+      "notion-calendar" # calendar for work and private
+      "obsidian" # note taking
+      "raycast" # spotlight utilities
+      "slack" # work comms
+      "telegram" # work comms
+      "zed" # general GUI editor
     ];
   };
 }
