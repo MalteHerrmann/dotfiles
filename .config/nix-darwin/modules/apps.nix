@@ -32,6 +32,8 @@
     python3
     uv
 
+    rustup
+
     nodejs
     yarn
 
@@ -69,6 +71,7 @@
     casks = [
       "arc" # main browser
       "bartender" # cleaner menu bar
+      "cursor" # ai editor
       "docker"
       "goland" # go ide
       "nikitabobko/tap/aerospace" # window manager

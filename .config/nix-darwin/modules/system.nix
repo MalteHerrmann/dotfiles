@@ -22,6 +22,11 @@
     # TODO: add more settings here, check e.g. https://github.com/torgeir/nix-darwin/blob/main/modules/system.nix#L5-L71
 
     defaults = {
+      dock = {
+        # Group windows by application in Mission Control
+        expose-group-apps = true;
+      };
+
       trackpad = {
         # tap to click
         Clicking = true;
