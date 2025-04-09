@@ -27,10 +27,8 @@ cd dotfiles
 stow .
 ```
 
-## Requirements
+## How to build Nix-darwin
 
-```
-brew install git
-brew install stow
-```
+To build the Nix-darwin configuration for MacOS, please check the [corresponding guide](./.config/nix-darwin/README.md).
+
 
