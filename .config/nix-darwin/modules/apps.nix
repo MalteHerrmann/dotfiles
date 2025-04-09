@@ -18,9 +18,6 @@
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
-    # editors
-    neovim
-
     # image editing
     gimp
 
@@ -65,7 +62,9 @@
     };
 
     # Equivalent to `brew install`
-    brews = [];
+    brews = [
+      "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
+    ];
 
     # Equivalent to `brew install --cask`
     casks = [
@@ -82,6 +81,7 @@
       "slack" # work comms
       "telegram" # work comms
       "zed" # general GUI editor
+      "zotero" # literature collection
     ];
   };
 }
