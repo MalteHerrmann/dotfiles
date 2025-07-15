@@ -74,6 +74,7 @@
       "cursor" # ai editor
       "docker"
       "goland" # go ide
+      "ghostty" # terminal emulator
       "nikitabobko/tap/aerospace" # window manager
       "notion" # work document system
       "notion-calendar" # calendar for work and private
