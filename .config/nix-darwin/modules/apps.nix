@@ -31,7 +31,7 @@
 
     rustup
 
-    nodejs
+    # nodejs
     yarn
 
     # dev tooling
@@ -65,6 +65,7 @@
     brews = [
       "foundry" # solidity / evm toolkit; TODO: move to nixpkgs on newer release, this is not included in 24.11 yet.
       "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
+      "node" # installing via brew because nix was not able to run `npm install -g` because of permission errors
     ];
 
     # Equivalent to `brew install --cask`
