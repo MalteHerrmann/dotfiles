@@ -63,6 +63,7 @@
 
     # Equivalent to `brew install`
     brews = [
+      "foundry" # solidity / evm toolkit; TODO: move to nixpkgs on newer release, this is not included in 24.11 yet.
       "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
     ];
 
