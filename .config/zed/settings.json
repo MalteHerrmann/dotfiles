@@ -19,16 +19,16 @@
       "show_inline_completions": false
     }
   },
-  "theme": "Rosé Pine Moon",
+  "theme": "Ayu Dark",
   "vim_mode": true,
   "relative_line_numbers": true,
   "base_keymap": "VSCode",
   // Font Settings
-  "ui_font_size": 12,
+  "ui_font_size": 13,
   "buffer_font_family": "InconsolataGo Nerd Font",
-  "buffer_font_size": 11,
+  "buffer_font_size": 12,
   "terminal": {
     "font_family": "InconsolataGo Nerd Font",
-    "font_size": 12
+    "font_size": 13
   }
 }

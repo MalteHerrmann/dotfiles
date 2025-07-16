@@ -22,6 +22,7 @@ alias gf='git fetch'
 alias gdp='git diff --name-only | fzf --preview "git diff --color=always -- {1}"'
 alias gdps='git diff --staged --name-only | fzf --preview "git diff --staged --color=always -- {1}"'
 alias glo='git log --oneline'
+alias glof='git log --oneline | fzf'
 alias gpo='git pull origin'
 alias gpl='git pull'
 alias gps='git push'
@@ -96,7 +97,6 @@ eval "$(fzf --zsh)"
 if [ -f '$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh' ]; then
   source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 fi
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc'; fi

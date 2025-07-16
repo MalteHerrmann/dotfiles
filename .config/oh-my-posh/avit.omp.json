@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#ffffff",
+          "foreground": "#aaaaaa",
           "properties": {
             "style": "full"
           },
