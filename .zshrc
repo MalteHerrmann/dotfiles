@@ -68,7 +68,9 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
         # eval "$(oh-my-posh init zsh)"
         # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
         # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
-        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/avit.omp.json)"
+        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/avit.omp.json)"
+        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/amro.omp.json)"
+        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catpuccin-frappe.omp.json)"
         # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/bubblesextra.omp.json)"
     else
         echo "oh-my-posh not found, skipping theme initialization."
@@ -96,6 +98,8 @@ if [ -f '$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh' ]; then
   source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 fi
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc'; fi
 
-# Added by Windsurf
-export PATH="/Users/malte/.codeium/windsurf/bin:$PATH"
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc'; fi
