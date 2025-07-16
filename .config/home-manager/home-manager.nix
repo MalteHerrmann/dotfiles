@@ -35,6 +35,8 @@
     python3
     pylint
     black
+    uv
+    ffmpeg-full
 
     nodejs
     yarn

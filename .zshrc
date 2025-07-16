@@ -22,11 +22,13 @@ alias gf='git fetch'
 alias gdp='git diff --name-only | fzf --preview "git diff --color=always -- {1}"'
 alias gdps='git diff --staged --name-only | fzf --preview "git diff --staged --color=always -- {1}"'
 alias glo='git log --oneline'
+alias glof='git log --oneline | fzf'
 alias gpo='git pull origin'
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
 alias h='hanchond'
+alias hp='hanchond playground'
 alias la='eza -la'
 alias lf='eza -lah'
 alias ll='eza -l'
@@ -94,3 +96,6 @@ if [ -f '$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh' ]; then
   source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
 fi
 
+
+# Added by Windsurf
+export PATH="/Users/malte/.codeium/windsurf/bin:$PATH"
