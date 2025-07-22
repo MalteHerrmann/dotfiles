@@ -51,6 +51,7 @@
     du-dust
     eza
     fzf
+    fd
     gh
     jq
     ripgrep
