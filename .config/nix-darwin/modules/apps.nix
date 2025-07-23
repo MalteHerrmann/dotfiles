@@ -47,6 +47,7 @@
     stow
     tmux
     tree
+    zellij
     zoxide
   ];
 
