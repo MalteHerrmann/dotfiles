@@ -38,6 +38,7 @@
     bat
     du-dust
     eza
+    fd
     fzf
     gh
     jq

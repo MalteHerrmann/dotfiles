@@ -1,0 +1,28 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+    children
+  }
+
+  tab name="dot" cwd="$HOME/dotfiles" {
+    pane
+  }
+
+  tab name="scripts" cwd="$HOME/dev/malteherrmann/random-scripts" {
+    pane
+  }
+
+  tab name="clu" cwd="$HOME/dev/malteherrmann/changelog-utils" {
+    pane
+  }
+
+  tab name="hanchond" cwd="$HOME/dev/malteherrmann/hanchond" {
+    pane
+  }
+
+  tab name="track-analyzer" cwd="$HOME/dev/malteherrmann/track-analyzer" {
+    pane
+  }
+}

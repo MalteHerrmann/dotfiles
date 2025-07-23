@@ -1,0 +1,32 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+    children
+  }
+
+  tab name="noble" cwd="$HOME/dev/noble-assets/noble" {
+    pane
+  }
+
+  tab name="dollar" cwd="$HOME/dev/noble-assets/dollar" {
+    pane
+  }
+
+  tab name="cctp" cwd="$HOME/dev/noble-assets/cctp" {
+    pane
+  }
+
+  tab name="fiattoken" cwd="$HOME/dev/noble-assets/fiattokenfactory" {
+    pane
+  }
+
+  tab name="nova" cwd="$HOME/dev/noble-assets/nova" {
+    pane
+  }
+
+  tab name="orbiter" cwd="$HOME/dev/noble-assets/orbiter" {
+    pane
+  }
+}
