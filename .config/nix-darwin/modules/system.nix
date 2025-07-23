@@ -10,14 +10,7 @@
   ###################################################################################
   system = {
     stateVersion = 5;
-
-    # activationScripts are executed every time you boot the system or
-    # run `darwin-rebuild`
-    activationScripts.postUserActivation.text = ''
-      # activateSettings -u will reload the settings from the database and apply them to the current session,
-      # so we do not need to logout and login again to make the changes take effect.
-      /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-    '';
+    primaryUser = "malteherrmann";
 
     # TODO: add more settings here, check e.g. https://github.com/torgeir/nix-darwin/blob/main/modules/system.nix#L5-L71
 
@@ -57,7 +50,7 @@
   };
 
   # Add ability to use TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
   # This is required if you want to use darwin's default shell - zsh
