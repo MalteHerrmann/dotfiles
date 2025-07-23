@@ -21,6 +21,9 @@
     # image editing
     gimp
 
+    # audio editing
+    ffmpeg-full
+
     # programming languages
     go
     gofumpt
@@ -31,7 +34,8 @@
 
     rustup
 
-    # nodejs
+    foundry # solidity / evm toolkit; TODO: move to nixpkgs on newer release, this is not included in 24.11 yet.
+    nodejs
     yarn
 
     # dev tooling
@@ -65,7 +69,6 @@
 
     # Equivalent to `brew install`
     brews = [
-      "foundry" # solidity / evm toolkit; TODO: move to nixpkgs on newer release, this is not included in 24.11 yet.
       "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
       "node" # installing via brew because nix was not able to run `npm install -g` because of permission errors
     ];
@@ -75,7 +78,7 @@
       "arc" # main browser
       "bartender" # cleaner menu bar
       "cursor" # ai editor
-      "docker"
+      # "docker"
       "goland" # go ide
       "ghostty" # terminal emulator
       "nikitabobko/tap/aerospace" # window manager
