@@ -34,8 +34,9 @@
 
     rustup
 
-    foundry # solidity / evm toolkit; TODO: move to nixpkgs on newer release, this is not included in 24.11 yet.
-    nodejs
+    foundry # solidity / evm toolkit
+
+    # nodejs
     yarn
 
     # dev tooling
@@ -78,7 +79,6 @@
       "arc" # main browser
       "bartender" # cleaner menu bar
       "cursor" # ai editor
-      # "docker"
       "goland" # go ide
       "ghostty" # terminal emulator
       "nikitabobko/tap/aerospace" # window manager
