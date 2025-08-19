@@ -32,6 +32,14 @@ if.app-name-regex-substring = 'arc'
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'dia'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'goland'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'zed'
 run = ['move-node-to-workspace 3']
 
@@ -44,7 +52,7 @@ if.app-name-regex-substring = 'warp'
 run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'kitty'
+if.app-name-regex-substring = 'ghostty'
 run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
