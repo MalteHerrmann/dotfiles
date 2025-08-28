@@ -27,27 +27,37 @@
     darwin,
     ...
   }: let
-    username = "malte";
     system = "aarch64-darwin";
-    hostname = "Maltes-MacBook-Pro";
 
-    specialArgs =
-      inputs
-      // {
-        inherit username hostname;
+    # Configuration for different machines
+    configs = {
+      "Maltes-MacBook-Air" = {
+        username = "malte";
+        hostname = "Maltes-MacBook-Air";
       };
-  in {
-    darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
-      inherit system specialArgs;
+      "Maltes-MacBook-Pro" = {
+        username = "malteherrmann";
+        hostname = "Maltes-MacBook-Pro";
+      };
+    };
+
+    # Function to create darwin configuration for a given hostname
+    makeDarwinConfig = hostname: config: darwin.lib.darwinSystem {
+      inherit system;
+      specialArgs = inputs // {
+        inherit (config) username hostname;
+      };
       modules = [
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
         ./modules/fonts.nix
-
         ./modules/host-users.nix
       ];
     };
+  in {
+    # Generate configurations for all defined machines
+    darwinConfigurations = builtins.mapAttrs makeDarwinConfig configs;
 
     # nix code formatter
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   ###################################################################################
   #
@@ -10,8 +10,7 @@
   ###################################################################################
   system = {
     stateVersion = 5;
-    # primaryUser = "malteherrmann";
-    primaryUser = "malte";
+    primaryUser = username;
 
     # TODO: add more settings here, check e.g. https://github.com/torgeir/nix-darwin/blob/main/modules/system.nix#L5-L71
 
