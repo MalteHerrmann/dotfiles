@@ -1,4 +1,5 @@
 # Build Darwin based on Nix configuration
+# HOSTNAME="$(hostname)"
 HOSTNAME="Maltes-MacBook-Pro"
 
 deploy:

@@ -76,20 +76,33 @@
 
     # Equivalent to `brew install --cask`
     casks = [
-      "arc" # main browser
-      "bartender" # cleaner menu bar
+      # Editors
       "cursor" # ai editor
       "goland" # go ide
-      "ghostty" # terminal emulator
+      "zed" # general GUI editor
+
+      # Productivity
+      "bartender" # cleaner menu bar
       "nikitabobko/tap/aerospace" # window manager
       "notion" # work document system
       "notion-calendar" # calendar for work and private
       "obsidian" # note taking
       "raycast" # spotlight utilities
+      "zotero" # literature collection
+
+      # Browser
+      "arc" # main browser
+
+      # Comms
       "slack" # work comms
       "telegram" # work comms
-      "zed" # general GUI editor
-      "zotero" # literature collection
+
+      # Terminal
+      "ghostty" # terminal emulator
+
+      # Container runners
+      # "docker"
+      "orbstack" # Docker replacement
     ];
   };
 }

@@ -27,7 +27,7 @@
     darwin,
     ...
   }: let
-    username = "malteherrmann";
+    username = "malte";
     system = "aarch64-darwin";
     hostname = "Maltes-MacBook-Pro";
 
