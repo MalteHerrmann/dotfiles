@@ -1,6 +1,7 @@
 # Paths
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin
 export VENV_DIR=$HOME/python/envs
 
 # -------------------------------------------------------------------------------

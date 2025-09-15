@@ -2,6 +2,9 @@
 .config/gh/
 .config/gtk-2.0/
 
+# docusaurus
+.config/configstore/update-notifier-@docusaurus
+
 # ignore .env file
 .env
 

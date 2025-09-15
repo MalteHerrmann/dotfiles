@@ -7,16 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "anthropic",
       "model": "claude-3-5-sonnet-20240620"
     },
-    "version": "2"
   },
   "languages": {
     "Rust": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     }
   },
   "theme": "Ayu Dark",

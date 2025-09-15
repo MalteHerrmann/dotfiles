@@ -26,7 +26,6 @@
 
     # programming languages
     go
-    gofumpt
     golangci-lint
 
     python3
@@ -37,6 +36,7 @@
     foundry # solidity / evm toolkit
 
     # nodejs
+    bun
     yarn
 
     # dev tooling
