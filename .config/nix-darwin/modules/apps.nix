@@ -90,6 +90,9 @@
       "raycast" # spotlight utilities
       "zotero" # literature collection
 
+      # Passwords
+      "bitwarden"
+
       # Browser
       "arc" # main browser
 
