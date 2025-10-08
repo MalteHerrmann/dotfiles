@@ -39,6 +39,9 @@
     bun
     yarn
 
+    # Security
+    gnupg
+
     # dev tooling
     bat
     du-dust
@@ -102,6 +105,9 @@
 
       # Terminal
       "ghostty" # terminal emulator
+
+      # SSH connections for Noble
+      "termius"
 
       # Container runners
       # "docker"
