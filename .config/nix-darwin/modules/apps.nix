@@ -56,6 +56,7 @@
     stow
     tmux
     tree
+    wget
     zellij
     zoxide
   ];
@@ -80,9 +81,9 @@
     # Equivalent to `brew install --cask`
     casks = [
       # Editors
+      "visual-studio-code" # mostly used for PR reviews
       "cursor" # ai editor
       "goland" # go ide
-      "zed" # general GUI editor
 
       # Productivity
       "bartender" # cleaner menu bar
