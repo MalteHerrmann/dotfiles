@@ -26,17 +26,18 @@
 
     # programming languages
     go
-    golangci-lint
+    golangci-lint # Go linter: https://github.com/golangci/golangci-lint
+    delve # Go debugger: https://github.com/go-delve/delve
 
     python3
-    uv
+    uv # Rust-based Python toolchain for project-based version management etc.: https://github.com/astral-sh/uv
 
-    rustup
+    rustup # Rust toolchain installer: https://github.com/rust-lang/rustup
 
-    foundry # solidity / evm toolkit
+    foundry # solidity / evm toolkit: https://github.com/foundry-rs/foundry
 
     # nodejs
-    bun
+    bun # Rust-based JS build tool and runner: https://github.com/oven-sh/bun
     yarn
 
     # Security
