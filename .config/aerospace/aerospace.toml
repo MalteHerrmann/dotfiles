@@ -32,7 +32,7 @@ if.app-name-regex-substring = 'arc'
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'dia'
+if.app-name-regex-substring = 'comet'
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
