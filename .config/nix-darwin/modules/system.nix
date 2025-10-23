@@ -36,7 +36,15 @@
         # fast key repeat rate when hold
         KeyRepeat = 2;
         InitialKeyRepeat = 15;
+
+        # Disable animations
+        NSWindowResizeTime = 0.001;
+        NSAutomaticWindowAnimationsEnabled = false;
       };
+
+      # # Reduce animations when switching screens
+      # # TODO: this is not working, reduce motion does not show up as enabled
+      # CustomSystemPreferences."com.apple.Accessibility".ReduceMotionEnabled = 1;
 
       finder = {
         # bottom status bar in Finder
