@@ -45,6 +45,7 @@
 
     # dev tooling
     bat
+    dasel # config file processor
     du-dust
     eza
     fd
