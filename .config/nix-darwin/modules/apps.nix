@@ -118,6 +118,9 @@
       # Container runners
       # "docker"
       "orbstack" # Docker replacement
+
+      # Music
+      "spotify"
     ];
   };
 }
