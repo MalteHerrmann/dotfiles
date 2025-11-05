@@ -112,6 +112,9 @@
       # SSH connections for Noble
       "termius"
 
+      # MongoDB Interactive GUI
+      "mongodb-compass"
+
       # Container runners
       # "docker"
       "orbstack" # Docker replacement
