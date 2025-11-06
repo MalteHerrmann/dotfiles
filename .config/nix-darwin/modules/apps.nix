@@ -76,6 +76,7 @@
 
     # Equivalent to `brew install`
     brews = [
+      "mysql" # database; installing via homebrew to use the services to start and stop it -> brew services start/stop mysql
       "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
       "node" # installing via brew because nix was not able to run `npm install -g` because of permission errors
     ];
