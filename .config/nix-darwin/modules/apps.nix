@@ -43,6 +43,9 @@
     # Security
     gnupg
 
+    # CLI version management
+    mise
+
     # dev tooling
     bat
     dasel # config file processor
@@ -51,6 +54,7 @@
     fd
     fzf
     gh
+    grpcurl
     jq
     # TODO: add required fonts to nix-darwin configuration
     oh-my-posh
@@ -79,6 +83,9 @@
       "mysql" # database; installing via homebrew to use the services to start and stop it -> brew services start/stop mysql
       "neovim" # terminal editor; not installing via nix to be able to update plugins more easily
       "node" # installing via brew because nix was not able to run `npm install -g` because of permission errors
+
+      # Password manager for terminal use
+      "bitwarden-cli"
     ];
 
     # Equivalent to `brew install --cask`
@@ -86,7 +93,11 @@
       # Editors
       "visual-studio-code" # mostly used for PR reviews
       "cursor" # ai editor
+      "zed" # another editor
       "goland" # go ide
+
+      # AI
+      "claude"
 
       # Productivity
       "bartender" # cleaner menu bar
