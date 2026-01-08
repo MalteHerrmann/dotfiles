@@ -56,6 +56,7 @@
     gh
     grpcurl
     jq
+    just
     # TODO: add required fonts to nix-darwin configuration
     oh-my-posh
     ripgrep
