@@ -24,6 +24,10 @@ if.app-name-regex-substring = 'calendar'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'spotify'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'brave'
 run = ['move-node-to-workspace 1']
 
