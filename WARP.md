@@ -7,7 +7,6 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 This is a personal dotfiles repository that manages system configurations using a hybrid approach:
 - **Nix** for package management and system configuration
 - **GNU Stow** for creating symlinks to configuration files
-- **Home Manager** for user-specific package and configuration management
 - **Nix-Darwin** for macOS system-level configuration
 
 ## Initial Setup Commands
@@ -25,22 +24,6 @@ stow .
 ```
 
 ## Nix Configuration Management
-
-### Home Manager (User-level packages and config)
-
-```bash
-# Navigate to home-manager config
-cd .config/home-manager
-
-# Apply home-manager configuration changes
-home-manager switch --flake .#malte
-
-# Check current home-manager generation
-home-manager generations
-
-# Roll back to previous generation (if needed)
-home-manager switch --flake .#malte --rollback
-```
 
 ### Nix-Darwin (System-level configuration for macOS)
 
@@ -78,8 +61,6 @@ The repository configures zsh with several productivity enhancements:
 
 ### Core Configuration Files
 - `.zshrc` - Shell configuration with aliases and tool initialization
-- `.config/home-manager/home-manager.nix` - User packages and home configuration
-- `.config/home-manager/flake.nix` - Home Manager flake definition
 - `.config/nix-darwin/flake.nix` - System-level Darwin configuration
 
 ### Application Configurations
@@ -99,8 +80,8 @@ Configurations automatically adapt based on hostname.
 
 ## Package Management Philosophy
 
-### Managed via Home Manager
-Core development tools are managed through Nix/Home Manager:
+### Managed via Nix-Darwin
+Core development tools are managed through Nix-Darwin:
 - **Languages**: Go, Python, Node.js
 - **Editors**: Neovim, Helix, Zed
 - **CLI Tools**: bat, eza, fzf, ripgrep, gh, jq
@@ -112,22 +93,20 @@ Rust toolchain is intentionally not managed via Nix due to complexity with overl
 ## Common Development Workflows
 
 ### Updating Configurations
-1. Edit relevant `.nix` files
-2. For user packages: `home-manager switch --flake .#malte`
-3. For system settings: `make deploy` (in nix-darwin directory)
+1. Edit relevant `.nix` files in `.config/nix-darwin/`
+2. Deploy changes: `make deploy` (in nix-darwin directory)
 
 ### Adding New Packages
-Add packages to `home.packages` in `.config/home-manager/home-manager.nix`, then run `home-manager switch --flake .#malte`
+Add packages to the appropriate package list in `.config/nix-darwin/flake.nix`, then run `make deploy`
 
 ### Configuration Rollbacks
-Both Home Manager and Nix-Darwin support rollbacks to previous generations if issues occur.
+Nix-Darwin supports rollbacks to previous generations if issues occur.
 
 ## Special Considerations
 
 ### Nix Flakes
 All configurations use Nix flakes with pinned versions:
-- Home Manager pinned to `nixpkgs-25.05-darwin` and `home-manager/release-25.05`
-- Nix-Darwin pinned to `nixpkgs-25.05-darwin` and `nix-darwin-25.05`
+- Nix-Darwin pinned to `nixpkgs-25.11-darwin` and `nix-darwin-25.11`
 
 ### Path Management
 The shell configuration adds several paths:
