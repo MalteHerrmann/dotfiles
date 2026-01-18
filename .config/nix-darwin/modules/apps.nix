@@ -54,6 +54,7 @@
     fd
     fzf
     gh
+    gitui # terminal ui git client
     grpcurl
     jq
     just
