@@ -18,9 +18,6 @@
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
-    # image editing
-    gimp
-
     # audio editing
     ffmpeg-full
 
@@ -49,7 +46,6 @@
     # dev tooling
     bat
     dasel # config file processor
-    du-dust
     eza
     fd
     fzf
@@ -101,6 +97,9 @@
       # AI
       "claude"
 
+      # image editing
+      "gimp"
+
       # Productivity
       "bartender" # cleaner menu bar
       "nikitabobko/tap/aerospace" # window manager
@@ -112,9 +111,6 @@
 
       # Passwords
       "bitwarden"
-
-      # Browser
-      "arc" # main browser
 
       # Comms
       "slack" # work comms
