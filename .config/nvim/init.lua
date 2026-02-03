@@ -5,4 +5,5 @@ require("config.lazy")
 vim.lsp.enable({
 	"gopls",
 	"rust-analyzer",
+	"solidity_ls_nomicfoundation",
 })
