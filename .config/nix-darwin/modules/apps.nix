@@ -50,10 +50,10 @@
     fd
     fzf
     gh
-    gitui # terminal ui git client
     grpcurl
     jq
     just
+    lazygit
     # TODO: add required fonts to nix-darwin configuration
     oh-my-posh
     ripgrep
@@ -95,7 +95,7 @@
       "goland" # go ide
 
       # AI
-      "claude"
+      "claude-code"
 
       # image editing
       "gimp"
