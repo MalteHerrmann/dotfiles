@@ -18,9 +18,9 @@
       "show_edit_predictions": false
     }
   },
-  "theme": "Ayu Dark",
+  "theme": "Gruvbox Light",
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "base_keymap": "VSCode",
   // Font Settings
   "ui_font_size": 13,

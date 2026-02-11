@@ -1,0 +1,33 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "agent": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+  },
+  "languages": {
+    "Rust": {
+      "show_edit_predictions": false
+    }
+  },
+  "theme": "Gruvbox Light",
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "base_keymap": "VSCode",
+  // Font Settings
+  "ui_font_size": 13,
+  "buffer_font_family": "InconsolataGo Nerd Font",
+  "buffer_font_size": 12,
+  "terminal": {
+    "font_family": "InconsolataGo Nerd Font",
+    "font_size": 13
+  }
+}
