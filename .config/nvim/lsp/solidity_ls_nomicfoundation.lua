@@ -1,6 +1,7 @@
 ---@type vim.lsp.Config
 ---
 ---Taken from: https://github.com/neovim/nvim-lspconfig/blob/5a49a97/lsp/solidity_ls_nomicfoundation.lua
+---TODO: check if this can be removed vs. the other solidity language server?
 ---
 return {
 	cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
