@@ -33,9 +33,11 @@
 
     foundry # solidity / evm toolkit: https://github.com/foundry-rs/foundry
 
+    # Javascript / Typescript
     # nodejs
     bun # Rust-based JS build tool and runner: https://github.com/oven-sh/bun
     yarn
+    pnpm
 
     # Security
     gnupg
