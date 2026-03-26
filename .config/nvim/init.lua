@@ -6,7 +6,7 @@ vim.lsp.enable({
 	"buf",
 	"gopls",
 	"rust-analyzer",
-	"solidity_language_server",
-	-- "solidity_ls_nomicfoundation",
+	-- "solidity_language_server",
+	"solidity_ls_nomicfoundation",
 	"ts_ls",
 })
