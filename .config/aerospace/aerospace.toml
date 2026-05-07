@@ -20,11 +20,11 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # Automatic app placing
 [[on-window-detected]]
-if.app-name-regex-substring = 'calendar'
-run = ['move-node-to-workspace 1']
+if.app-name-regex-substring = '1password'
+run = ['layout floating']
 
 [[on-window-detected]]
-if.app-name-regex-substring = '1password'
+if.app-name-regex-substring = 'calendar'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
