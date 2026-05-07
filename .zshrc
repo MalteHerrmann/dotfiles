@@ -1,6 +1,12 @@
 # Paths
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:$HOME/.cargo/bin
+if command -v go >/dev/null 2>&1; then
+    export PATH=$PATH:$(go env GOPATH)/bin
+fi
+
+if command -v cargo >/dev/null 2>&1; then
+  export PATH=$PATH:$HOME/.cargo/bin
+fi
+
 export PATH=$PATH:$HOME/.local/bin
 export VENV_DIR=$HOME/python/envs
 
@@ -31,6 +37,7 @@ alias h='hanchond'
 alias hp='hanchond playground'
 alias la='eza -la'
 alias lf='eza -lah'
+alias lg='lazygit'
 alias ll='eza -l'
 alias ls='eza'
 alias mcl='make check-licenses'
@@ -63,18 +70,8 @@ compinit -i
 #
 
 # Set up oh-my-posh
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    if command -v oh-my-posh >/dev/null 2>&1; then
-        # eval "$(oh-my-posh init zsh)"
-        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catppuccin.omp.json)"
-        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/blueish_reduced.omp.json)"
-        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/avit.omp.json)"
-        eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/amro.omp.json)"
-        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/catpuccin-frappe.omp.json)"
-        # eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/bubblesextra.omp.json)"
-    else
-        echo "oh-my-posh not found, skipping theme initialization."
-    fi
+if command -v oh-my-posh >/dev/null 2>&1; then
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/amro.omp.json)"
 fi
 
 # Set up zoxide
@@ -84,7 +81,9 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
 # Set up Mise
-eval "$(mise activate zsh)"
+if command -v mise >/dev/null 2>&1; then
+    eval "$(mise activate zsh)"
+fi
 
 # --------------------
 # Nix
@@ -107,3 +106,8 @@ if [ -f '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/m
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc'; fi
 
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
