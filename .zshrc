@@ -11,6 +11,19 @@ export PATH=$PATH:$HOME/.local/bin
 export VENV_DIR=$HOME/python/envs
 
 # -------------------------------------------------------------------------------
+# Functions
+
+# This function reads a solana private key from a given 1password secret and
+# prints the corresponding public key.
+op-solana-pubkey() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: op-solana-pubkey <op-secret-reference>" >&2
+    return 1
+  fi
+  solana-keygen pubkey <(op read "$1")
+}
+
+# -------------------------------------------------------------------------------
 
 # For a full list of active aliases, run `alias`.
 # Aliases
