@@ -9,6 +9,7 @@ fi
 
 export PATH=$PATH:$HOME/.local/bin
 export VENV_DIR=$HOME/python/envs
+export PERSONAL_NOTES_HOME="$HOME/dev/malteherrmann/notes/"
 
 # -------------------------------------------------------------------------------
 # Functions
