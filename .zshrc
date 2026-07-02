@@ -10,6 +10,8 @@ fi
 export PATH=$PATH:$HOME/.local/bin
 export VENV_DIR=$HOME/python/envs
 export PERSONAL_NOTES_HOME="$HOME/dev/malteherrmann/notes/"
+export M0_CLAUDE_AI_TOOLS="$HOME/dev/m0-foundation/ai-tools/"
+export M0_CLAUDE_CLAUDE="$HOME/dev/m0-foundation/claude/"
 
 # -------------------------------------------------------------------------------
 # Functions
