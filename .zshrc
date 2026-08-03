@@ -7,7 +7,14 @@ if command -v cargo >/dev/null 2>&1; then
   export PATH=$PATH:$HOME/.cargo/bin
 fi
 
-export PATH=$PATH:$HOME/.local/bin
+# Solana CLI tools path
+if [ -d "$HOME/.local/share/solana/install/active_release/bin" ]; then
+    export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH=$PATH:$HOME/.local/bin
+fi
 export VENV_DIR=$HOME/python/envs
 export PERSONAL_NOTES_HOME="$HOME/dev/malteherrmann/notes/"
 export M0_CLAUDE_AI_TOOLS="$HOME/dev/m0-foundation/ai-tools/"
@@ -96,6 +103,17 @@ eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
+# Node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# >>> railway initialize >>>
+if [ -f "$HOME/.railway/env" ]; then
+    source "$HOME/.railway/env"
+fi
+# <<< railway initialize <<<
+
 # Set up Mise
 if command -v mise >/dev/null 2>&1; then
     eval "$(mise activate zsh)"
@@ -112,8 +130,8 @@ fi
 # fi
 
 # Load nix session vars if it exists
-if [ -f '$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh' ]; then
-  source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+if [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+  source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -122,12 +140,3 @@ if [ -f '/Users/malteherrmann/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/m
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/malteherrmann/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# >>> railway initialize >>>
-source "$HOME/.railway/env"
-# <<< railway initialize <<<
