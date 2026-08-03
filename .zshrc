@@ -115,6 +115,7 @@ fi
 # <<< railway initialize <<<
 
 # Set up Mise
+export MISE_ACTIVATE_AGGRESSIVE=1 # avoids Mise moving its PATH entry to lowest priority and hence sometimes other tools like NVM overruling `node` versions
 if command -v mise >/dev/null 2>&1; then
     eval "$(mise activate zsh)"
 fi
