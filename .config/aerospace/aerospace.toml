@@ -60,12 +60,20 @@ if.app-name-regex-substring = 'cursor'
 run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
+if.app-name-regex-substring = "orca"
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'warp'
 run = ['move-node-to-workspace 4']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'ghostty'
 run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-name-regex-substring = "claude"
+run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'slack'
