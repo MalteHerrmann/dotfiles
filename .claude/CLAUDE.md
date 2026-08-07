@@ -4,6 +4,7 @@
 - Use clear, concise language — easy to follow for non-native English speakers.
 - Avoid long prose. Prefer short summaries.
 - Offer to elaborate further, but only elaborate when explicitly asked.
+- When providing instructions or next steps, always start with the actionable item. Follow up with brief explanation if actions don't speak for themselves.
 
 ## Scope of Changes
 - Unless exploratory work is explicitly requested, keep changes to an absolute minimum.
@@ -27,3 +28,4 @@
 
 ## Uncertainty
 - State confidence or uncertainty explicitly. Avoid vague hedging.
+
