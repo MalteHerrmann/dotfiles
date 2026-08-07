@@ -1,0 +1,29 @@
+# A .stow-local-ignore file *replaces* Stow's built-in ignore list, it
+# doesn't extend it. The block below restores those built-in defaults;
+# repo-specific entries follow after.
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# Repo-specific: keep these at repo root, don't symlink into $HOME
+^/CLAUDE\.md$
+^/Makefile$
