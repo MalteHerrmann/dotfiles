@@ -60,6 +60,10 @@ if.app-name-regex-substring = 'cursor'
 run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'webstorm'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
 if.app-name-regex-substring = "orca"
 run = ['move-node-to-workspace 3']
 
@@ -74,6 +78,14 @@ run = ['move-node-to-workspace 4']
 [[on-window-detected]]
 if.app-name-regex-substring = "claude"
 run = ['move-node-to-workspace 5']
+
+[[on-window-detected]]
+if.app-name-regex-substring = "t3 code"
+run = ['move-node-to-workspace 5']
+
+[[on-window-detected]]
+if.app-name-regex-substring = "linear"
+run = ['move-node-to-workspace 6']
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'slack'
@@ -120,7 +132,8 @@ alt-1 = 'workspace 1' # Calendar
 alt-2 = 'workspace 2' # Browser
 alt-3 = 'workspace 3' # Editors
 alt-4 = 'workspace 4' # Terminal
-alt-5 = 'workspace 5'
+alt-5 = 'workspace 5' # AI tools
+alt-6 = 'workspace 6' # Linear / Project Management
 alt-n = 'workspace N' # Notes
 alt-s = 'workspace S' # Social
 
@@ -130,6 +143,7 @@ ctrl-shift-2 = 'move-node-to-workspace 2'
 ctrl-shift-3 = 'move-node-to-workspace 3'
 ctrl-shift-4 = 'move-node-to-workspace 4'
 ctrl-shift-5 = 'move-node-to-workspace 5'
+ctrl-shift-6 = 'move-node-to-workspace 6'
 ctrl-shift-n = 'move-node-to-workspace N'
 ctrl-shift-s = 'move-node-to-workspace S'
 
